@@ -31,6 +31,7 @@ const models = {}
 
 const ItemManager = require("./ItemManager")
 const CharactersManager = require("./CharactersManager")
+const NoteManager = require("./NoteManager")
 
 models.item = new ItemManager()
 models.item.setDatabase(pool)
@@ -38,6 +39,8 @@ models.item.setDatabase(pool)
 models.characters = new CharactersManager()
 models.characters.setDatabase(pool)
 
+models.note = new NoteManager()
+models.note.setDatabase(pool)
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
 
