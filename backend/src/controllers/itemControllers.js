@@ -89,3 +89,6 @@ module.exports = {
   add,
   destroy,
 }
+
+// Le commentaire  TODO validations (length, format...) est une note placée par le développeur pour indiquer que, à cet endroit précis du code, des vérifications ou "validations" supplémentaires doivent être ajoutées ultérieurement. Ces validations permettent de s'assurer que les données fournies par l'utilisateur ou par un client respectent certaines conditions avant d'être traitées ou enregistrées dans la base de données.
+// Les validations sont essentielles dans les applications pour garantir l'intégrité des données et la sécurité. Cependant, lors de la première création d'un projet ou d'une fonctionnalité, certains développeurs choisissent de d'abord mettre en place les fonctionnalités principales, puis d'ajouter des validations ultérieurement. Cette approche est parfois appelée "make it work, then make it right" (faites-le fonctionner, puis faites-le correctement). Bien que ce ne soit pas l'approche optimale, elle est courante, surtout quand on est pressé.

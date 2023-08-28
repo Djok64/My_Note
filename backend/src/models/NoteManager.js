@@ -16,8 +16,8 @@ class NoteManager extends AbstractManager {
   insert(notes) {
     // Insérer une nouvelle note dans la base de données
     return this.database.query(
-      `INSERT INTO ${this.table} (title, content) VALUES (?, ?)`,
-      [notes.title, notes.content]
+      `INSERT INTO ${this.table} (title, content, dateCreated) VALUES (?, ?, ?)`,
+      [notes.title, notes.content, notes.dateCreated]
     )
   }
 
@@ -33,8 +33,8 @@ class NoteManager extends AbstractManager {
   update(notes) {
     // Mettre à jour une note spécifique dans la base de données en fonction de son ID
     return this.database.query(
-      `UPDATE ${this.table} SET title = ?, content = ? WHERE id = ?`,
-      [notes.title, notes.content, notes.id]
+      `UPDATE ${this.table} SET title = ?, content = ?, dateCreated = ? WHERE id = ?`,
+      [notes.title, notes.content, notes.dateCreated, notes.id]
     )
   }
 
