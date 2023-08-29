@@ -9,14 +9,14 @@ class NoteManager extends AbstractManager {
     super({ table: "notes" })
   }
 
-  // CREATE ci dessous Prend en argument un objet note qui contient les propriétés title et content.
+  // CREATE 'insert' ci dessous Prend en argument un objet note qui contient les propriétés title et content.
   // Utilise la méthode query de l'objet database pour insérer une nouvelle note dans la table note.
   // Renvoie le résultat de la requête.
 
   insert(notes) {
     // Insérer une nouvelle note dans la base de données
     return this.database.query(
-      `INSERT INTO ${this.table} (title, content, dateCreated) VALUES (?, ?, ?)`,
+      `INSERT INTO ${this.table} (title, content, dateCreated) VALUES (?, ?, ?)`, // placeholder (evite les injection SQL "securité ")
       [notes.title, notes.content, notes.dateCreated]
     )
   }
