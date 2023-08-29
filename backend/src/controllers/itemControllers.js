@@ -1,3 +1,4 @@
+// exemple de controller pour une table item
 const models = require("../models")
 
 const browse = (req, res) => {

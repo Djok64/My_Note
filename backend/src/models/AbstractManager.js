@@ -1,3 +1,6 @@
+// ceci est le manager "général" il contient les methode propre a toute les tables
+// toutes ces methode seront transmise aux autre manager pour chaque table via :
+// class NoteManager extends AbstractManager {
 class AbstractManager {
   constructor({ table }) {
     this.table = table
