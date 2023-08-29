@@ -34,6 +34,7 @@ const read = (req, res) => {
 const edit = (req, res) => {
   const note = req.body
   const id = parseInt(req.params.id, 10)
+  // Le deuxième argument de parseInt : Le deuxième argument est appelé "radix" et il indique à la fonction quelle base numérique utiliser pour la conversion. En JavaScript, les nombres peuvent être écrits en différentes bases, telles que décimale (base 10), hexadécimale (base 16), binaire (base 2), etc. Le "10" indique que la conversion doit être effectuée en utilisant la base décimale (base 10).
 
   models.note
     .uptade(id, note)
@@ -57,7 +58,7 @@ const add = (req, res) => {
   models.note
     .insert(note)
     .then(([result]) => {
-      res.location(`/notes/${result.insertID}`).sendStatus(201)
+      res.location(`/notes/${result.insertId}`).sendStatus(201)
     })
     .catch((err) => {
       console.error(err)
@@ -176,6 +177,7 @@ module.exports = {
 // const note = req.body: Cette ligne récupère les données envoyées avec la requête. Ces données contiennent les détails mis à jour de la note.
 
 // const id = parseInt(req.params.id, 10): Nous récupérons l'ID de la note depuis l'URL et nous nous assurons qu'il est bien un nombre entier.
+// Le "10" indique que la conversion doit être effectuée en utilisant la base décimale (base 10).
 
 // models.note.update(id, note): Nous appelons la méthode update de notre modèle pour mettre à jour la note avec l'ID spécifié.
 
