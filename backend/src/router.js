@@ -79,4 +79,3 @@ module.exports = router
 
 // Résumé
 // Chaque fois qu'une requête arrive à ton serveur, Express vérifie si l'URL et la méthode HTTP correspondent à l'une des routes définies. Si c'est le cas, le contrôleur correspondant est exécuté pour traiter la requête et envoyer une réponse.
-// test
