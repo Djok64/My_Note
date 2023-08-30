@@ -3,8 +3,8 @@ const express = require("express")
 
 const router = express.Router()
 // ce sont les controller du template :
-const userControllers = require("../controllers/userControllers")
-const noteControllers = require("../controllers/noteControllers")
+const userControllers = require("./controllers/userControllers")
+const noteControllers = require("./controllers/noteControllers")
 
 const itemControllers = require("./controllers/itemControllers")
 const charactersControllers = require("./controllers/charactersControllers")
