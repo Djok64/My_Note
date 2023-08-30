@@ -1,6 +1,6 @@
 const models = require("../models")
 
-// Cette fonction renvoie toutes les notes find(All) le controler le tien du manager
+// Cette fonction renvoie toutes les notes find(All) le controler le tien du manager c'est le handler de la route associé dans router.js
 const browse = (req, res) => {
   models.note
     .findAll()
@@ -13,7 +13,7 @@ const browse = (req, res) => {
     })
 }
 
-// Cette fonction renvoie une note spécifique en fonction de son ID
+// Cette fonction renvoie une note spécifique en fonction de son ID c'est le handler de la route associé dans router.js
 const read = (req, res) => {
   models.note
     .find(req.params.id)
@@ -30,7 +30,7 @@ const read = (req, res) => {
     })
 }
 
-// Cette fonction met à jour une note
+// Cette fonction met à jour une note c'est le handler de la route associé dans router.js
 const edit = (req, res) => {
   const note = req.body
   const id = parseInt(req.params.id, 10)
@@ -51,7 +51,7 @@ const edit = (req, res) => {
     })
 }
 
-// Cette fonction ajoute une nouvelle note
+// Cette fonction ajoute une nouvelle note c'est le handler de la route associé dans router.js
 const add = (req, res) => {
   const note = req.body
 
@@ -66,7 +66,7 @@ const add = (req, res) => {
     })
 }
 
-// Cette fonction supprime une note
+// Cette fonction supprime une note c'est le handler de la route associé dans router.js
 const destroy = (req, res) => {
   models.note
     .delete(req.params.id)

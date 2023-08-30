@@ -12,7 +12,7 @@ const charactersControllers = require("./controllers/charactersControllers")
 // CREATION DES ROUTES POUR LA TABLE users :
 
 // Pour récupérer tous les utilisateurs de la table users:
-router.get("/users", userControllers.browse)
+router.get("/users", userControllers.browse) // router.get(PATH, HANDLER)/(cheminUrl, fonction du controller)
 // Pour récupérer un utilisateur spécifique par ID de la table users:
 router.get("/users/:id", userControllers.read)
 // Pour ajouter un nouvel utilisateur a la table users:
