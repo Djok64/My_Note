@@ -34,6 +34,7 @@ const models = {}
 const ItemManager = require("./ItemManager")
 const CharactersManager = require("./CharactersManager")
 const NoteManager = require("./NoteManager")
+const UserManager = require("./UserManager")
 
 models.item = new ItemManager()
 models.item.setDatabase(pool)
@@ -43,6 +44,9 @@ models.characters.setDatabase(pool)
 
 models.note = new NoteManager()
 models.note.setDatabase(pool)
+
+models.user = new UserManager()
+models.user.setDatabase(pool)
 // liaison du model a la base de donnée:
 // Cette section charge chaque manager, crée une nouvelle instance de chaque manager, puis définit la base de données (la pool de connexions) pour chacun d'eux.
 

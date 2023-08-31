@@ -37,7 +37,7 @@ const edit = (req, res) => {
   // Le deuxième argument de parseInt : Le deuxième argument est appelé "radix" et il indique à la fonction quelle base numérique utiliser pour la conversion. En JavaScript, les nombres peuvent être écrits en différentes bases, telles que décimale (base 10), hexadécimale (base 16), binaire (base 2), etc. Le "10" indique que la conversion doit être effectuée en utilisant la base décimale (base 10).
 
   models.note
-    .uptade(id, note)
+    .update(id, note)
     .then(([result]) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404)
@@ -54,7 +54,11 @@ const edit = (req, res) => {
 // Cette fonction ajoute une nouvelle note c'est le handler de la route associé dans router.js
 const add = (req, res) => {
   const note = req.body
-
+  if (!note.users_id) {
+    return res.status(400).send({
+      message: "L'ID utilisateur est nécessaire pour ajouter une note.",
+    })
+  }
   models.note
     .insert(note)
     .then(([result]) => {
